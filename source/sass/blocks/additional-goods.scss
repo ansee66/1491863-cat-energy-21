@@ -1,0 +1,55 @@
+.additional-goods {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.additional-goods__title {
+  font-family: Oswald;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+
+  color: black;
+}
+
+.additional-goods__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.additional-good__title {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+
+  color: $specialdarkgrey;
+}
+
+.additional-goods__button {
+  padding-top: 11px;
+}
+
+.additional-goods__bonus {
+  height: 289px;
+  width: 280px;
+
+  background-image: url("../img/gift-photo-mobile-1.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.additional-goods__bonus-text {
+  padding-top: 180px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  color: white;
+}

@@ -1,0 +1,19 @@
+.product-card {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card__title {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+
+  color: $specialdarkgrey;
+}
+
+.product-card__button {
+  padding-top: 11px;
+}

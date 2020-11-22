@@ -1,0 +1,52 @@
+.case {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: $greyforcase;
+}
+
+
+.case__title {
+  margin: 0;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+
+  color: black;
+}
+
+.case__number {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: black;
+}
+
+.case__sum {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: black;
+}
+
+.case__slider-toggle {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: black;
+}
