@@ -1,0 +1,32 @@
+.basic-goods {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.basic-goods__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.basic-goods__more-goods {
+  text-align: center;
+}
+
+.basic-goods__more-goods-title {
+  font-family: Oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.basic-goods__button {
+  padding-top: 11px;
+
+  color: $darkgrey;
+  background-color: $basicgrey;
+}
