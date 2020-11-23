@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -28,13 +29,13 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1>Функциональное питание для котов</h1>
+      <h1 class="page-main__title">Функциональное питание для котов</h1>
       <section class="promo">
         <div class="promo__wrapper">
           <h2 class="visually-hidden">Промо-блок Кэт Энерджи</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <img class="promo__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Фирменное начертание Кэт энерджи">
-          <a class="promo__button" href="form.html">Подобрать программу</a>
+          <a class="promo__button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
       <section class="goals">
@@ -44,12 +45,12 @@
             <li class="goals__item goals__item--slim">
               <h3 class="goals__title">Похудение</h3>
               <p class="goals__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="goals__button" href="catalog.html">Каталог Slim</a>
+              <a class="goals__link" href="catalog.html">Каталог Slim</a>
             </li>
             <li class="goals__item goals__item--pro">
               <h3 class="goals__title">Набор массы</h3>
               <p class="goals__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="goals__button" href="catalog.html">Каталог Pro</a>
+              <a class="goals__link" href="catalog.html">Каталог Pro</a>
             </li>
           </ul>
         </div>
@@ -95,17 +96,17 @@
     </main>
 
     <footer class="page-footer">
+      <div class="page-footer__contacts contacts">
+        <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
+        <p class="contacts__city">Санкт-Петербург</p>
+        <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта расположения Кэт Энерджи">
+      </div>
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="contacts__city">Санкт-Петербург</p>
-          <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта расположения Кэт Энерджи">
-        </div>
         <div class="page-footer__logo">
-          <a class="page-footer__logo-link" href="index.html">
-            <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип (текст) Кэт энерджи">
-          </a>
+        <a class="page-footer__logo-link" href="index.html">
+          <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип (текст) Кэт энерджи">
+        </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
