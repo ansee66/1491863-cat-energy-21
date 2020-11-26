@@ -1,15 +1,43 @@
+.goals {
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.goals__wrapper {
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .goals__list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-content: start;
+
+    width: 1220px;
+  }
 }
 
 .goals__item {
+  box-sizing: border-box;
   padding: 20px;
   margin-bottom: 20px;
 
   background-color: $basicgrey;
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .goals__title {

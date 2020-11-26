@@ -1,6 +1,32 @@
+.page-footer {
+  grid-area: footer;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+}
+
 .page-footer__wrapper {
   padding-top: 39px;
   padding-bottom: 22px;
+  padding-left: 19px;
+  padding-right: 20px;
+
+  text-align: center;
 
   background-color: $basicgrey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

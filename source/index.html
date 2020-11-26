@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -29,15 +30,18 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Функциональное питание для котов</h1>
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h2 class="visually-hidden">Промо-блок Кэт Энерджи</h2>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Фирменное начертание Кэт энерджи">
-          <a class="promo__button button" href="form.html">Подобрать программу</a>
-        </div>
-      </section>
+      <div class="page-main__h1-wrapper">
+        <h1 class="page-main__title">Функциональное <br>питание для котов</h1>
+        <section class="promo">
+          <div class="promo__wrapper">
+            <h2 class="visually-hidden">Промо-блок Кэт Энерджи</h2>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
+            <img class="promo__image" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Фирменное начертание Кэт энерджи">
+            <a class="promo__button button" href="form.html">Подобрать программу</a>
+          </div>
+        </section>
+      </div>
+
       <section class="goals">
         <h2 class="visually-hidden">Цели, которых можно достичь с Кэт Энерджи</h2>
         <div class="goals__wrapper">
@@ -70,19 +74,21 @@
 
       <section class="case">
         <div class="case__wrapper">
-          <h2 class="case__title">Живой пример</h2>
-          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="case__list">
-            <div class="case__item">
-              <dt class="case__number">5 кг</dt>
-              <dd class="case__description">снижение веса</dd>
-            </div>
-            <div class="case__item">
-              <dt class="case__number">60 дней</dt>
-              <dd class="case__description">затрачено времени</dd>
-            </div>
-          </dl>
-          <p class="case__sum">Затраты на питание: 15 000 руб.</p>
+          <div class="case__text">
+            <h2 class="case__title">Живой пример</h2>
+            <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="case__list">
+              <div class="case__item">
+                <dt class="case__number">5 кг</dt>
+                <dd class="case__description">снижение веса</dd>
+              </div>
+              <div class="case__item">
+                <dt class="case__number">60 дней</dt>
+                <dd class="case__description">затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="case__sum">Затраты на питание: 15 000 руб.</p>
+          </div>
           <div class="case__slider">
             <img class="case__image-before" src="https://via.placeholder.com/311x232" width="311" height="232">
             <img class="case__image-after" src="https://via.placeholder.com/251x240" width="251" height="240">
@@ -97,9 +103,13 @@
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="contacts__city">Санкт-Петербург</p>
+        <div class="contacts__wrapper">
+          <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
+          <div class="contacts__address-wrapper">
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="contacts__city">Санкт-Петербург</p>
+          </div>
+        </div>
         <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта расположения Кэт Энерджи">
       </div>
       <div class="page-footer__wrapper">
