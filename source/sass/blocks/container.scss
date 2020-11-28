@@ -1,0 +1,19 @@
+.container {
+  max-width: 728px; // ширина планшетной версии минус паддинги
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1380px; // ширина декстопной версии минус паддинги
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1220px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

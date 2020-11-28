@@ -1,19 +1,5 @@
 .how-it-works {
   margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-.how-it-works__wrapper {
-  @media (min-width: $desktop-width) {
-    max-width: 1220px;
-    margin: 0 auto;
-  }
 }
 
 .how-it-works__title {

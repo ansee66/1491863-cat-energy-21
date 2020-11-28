@@ -1,12 +1,7 @@
 .case {
-  padding: 20px;
+  padding-top: 20px;
 
   background-color: $greyforcase;
-
-  @media (min-width: $tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }
 
 .case__wrapper {
@@ -14,9 +9,6 @@
     display: grid;
     grid-template-columns: auto 650px;
     gap: 130px;
-
-    width: 1220px;
-    margin: 0 auto;
   }
 }
 

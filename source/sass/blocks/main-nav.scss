@@ -1,3 +1,9 @@
+.main-nav {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+}
+
 .main-nav__toggle {
   @media (min-width: $tablet-width) {
     display: none;
@@ -13,11 +19,6 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 440px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 478px;
   }
 }
 
@@ -32,9 +33,15 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding-right: 35px;
+
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {

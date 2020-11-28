@@ -1,17 +1,3 @@
-.goals {
-  @media (min-width: $tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-.goals__wrapper {
-  @media (min-width: $desktop-width) {
-    max-width: 1220px;
-    margin: 0 auto;
-  }
-}
-
 .goals__list {
   margin: 0;
   padding: 0;
