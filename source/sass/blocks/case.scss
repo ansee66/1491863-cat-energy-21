@@ -1,10 +1,16 @@
 .case {
   padding-top: 20px;
-  padding-bottom: 20px;
 
   background-color: $greyforcase;
 }
 
+.case__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 650px;
+    gap: 130px;
+  }
+}
 
 .case__title {
   margin: 0;

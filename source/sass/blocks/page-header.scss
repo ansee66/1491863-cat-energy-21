@@ -1,3 +1,25 @@
 .page-header {
+  grid-area: header;
+
+  display: flex;
+  flex-direction: column;
+
   padding-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  height: 66px;
+
+  @media (min-width: $tablet-width) {
+    height: 51.68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+  }
 }

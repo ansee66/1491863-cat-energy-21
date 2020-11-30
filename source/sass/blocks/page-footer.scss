@@ -1,6 +1,17 @@
+.page-footer {
+  grid-area: footer;
+}
+
 .page-footer__wrapper {
   padding-top: 39px;
   padding-bottom: 22px;
 
+  text-align: center;
+
   background-color: $basicgrey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

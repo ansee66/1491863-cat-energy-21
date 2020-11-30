@@ -2,6 +2,15 @@
   padding-top: 20px;
 }
 
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 71px;
+  }
+}
+
 .contacts__invitation {
   font-family: "Oswald", sans-serif;
   font-size: 16px;

@@ -19,4 +19,35 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.how-it-works__item {
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    min-height: 280px;
+    margin-right: 130px;
+
+    &:nth-child(2n) {
+      margin-right: 75px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 70px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }

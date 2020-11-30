@@ -1,4 +1,16 @@
+.page-main {
+  grid-area: content;
+}
+
+.page-main__h1-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
 .page-main__title {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -6,5 +18,24 @@
   text-align: center;
 
   color: white;
-  background-color: rgba(104, 183, 56, 0.85);
+
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 117px;
+    padding-right: 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+
+    color: black;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1140px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 0;
+  }
 }
