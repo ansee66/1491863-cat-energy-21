@@ -18,9 +18,15 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 38px;
+  }
 }
 
 .additional-good__title {
+  margin: 10px 0;
+
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -29,10 +35,71 @@
   text-transform: uppercase;
 
   color: $specialdarkgrey;
+
+  @media (min-width: $tablet-width) {
+    grid-area: ag-t;
+  }
+}
+
+.additional-goods__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.additional-goods__item {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      "ag-t ag-t ag-t ag-t ag-pt ag-pa ag-pa ag-pr"
+      "ag-b ag-b ag-b ag-b ag-b ag-b ag-b ag-b";
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas:
+      "ag-t ag-t ag-t ag-t ag-pa ag-pa ag-pa ag-pr ag-b ag-b ag-b";
+  }
+}
+
+.additional-good__parameter {
+  margin: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: ag-pa;
+
+    text-align: right;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+}
+
+.additional-good__price {
+  margin: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    grid-area: ag-pr;
+
+    text-align: right;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
 .additional-goods__button {
   padding-top: 11px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-area: ag-b;
+  }
 }
 
 .additional-goods__bonus {
