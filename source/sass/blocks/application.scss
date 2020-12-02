@@ -9,6 +9,13 @@
   color: black;
 }
 
+.application__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .application__fieldset {
   margin: 0;
   padding: 20px 0;
@@ -30,10 +37,29 @@
   list-style: none;
 }
 
+.application__list--two-columns {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .application__item,
 .application__item input {
   font: inherit;
   text-transform: uppercase;
+}
+
+.application__item--textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.application__end-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .application__note {
