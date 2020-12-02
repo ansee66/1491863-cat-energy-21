@@ -60,8 +60,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-areas:
-      "ag-t ag-t ag-t ag-t ag-pa ag-pa ag-pa ag-pr ag-b ag-b ag-b";
+    grid-template-areas: "ag-t ag-t ag-t ag-t ag-pa ag-pa ag-pa ag-pr ag-b ag-b ag-b";
   }
 }
 
