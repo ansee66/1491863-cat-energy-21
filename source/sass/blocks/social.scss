@@ -1,9 +1,41 @@
 .social__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.social__item {
+  margin-right: 36px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link--vkontakte,
+.social__link--instagram {
+  &:hover path,
+  &:focus path {
+    fill: $basicgreen;
+  }
+
+  &:active path {
+    fill-opacity: 0.3;
+  }
+}
+
+.social__link--facebook {
+  &:hover path,
+  &:focus path {
+    stroke: $basicgreen;
+  }
+
+  &:active {
+    stroke-opacity: 0.3;
+  }
 }
