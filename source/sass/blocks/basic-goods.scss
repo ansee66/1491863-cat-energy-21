@@ -1,29 +1,96 @@
 .basic-goods {
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+
+    font-size: 16px;
+  }
 }
 
 .basic-goods__list {
   margin: 0;
-  padding: 0;
+  padding: 13px 0 0 0;
 
   list-style: none;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 69px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 64px;
+
+    padding-top: 6px;
+  }
+}
+
+.basic-goods__item {
+  position: relative;
+
+  padding-top: 19px;
+  padding-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
   }
 }
 
 .basic-goods__item--more-goods {
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    height: 429px;
+    margin-top: 71px;
+    padding: 36px;
+
+    border: 2px solid $basicgrey;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+  }
 }
 
 .basic-goods__more-goods-title {
+  margin: 0;
+  padding-top: 61px;
+
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -31,11 +98,50 @@
   text-transform: uppercase;
 
   color: #111111;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 63px;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    & br {
+      display: inline-block;
+    }
+  }
+}
+
+.basic-goods__more-goods-text {
+  margin: 7px 0;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+
+    line-height: 18px;
+
+    & br {
+      display: inline-block;
+    }
+  }
 }
 
 .basic-goods__button {
+  width: 100%;
+  margin-top: 22px;
   padding-top: 11px;
 
   color: $darkgrey;
   background-color: $basicgrey;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 85px;
+  }
 }

@@ -1,7 +1,24 @@
 .case {
   padding-top: 20px;
+  padding-bottom: 34px;
 
   background-color: $greyforcase;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    background-image: linear-gradient(to top, $greyforcase, $greyforcase);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 462px;
+    border-top: 1px solid $greyforlines;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 0;
+
+    border-top: none;
+  }
 }
 
 .case__wrapper {
@@ -13,7 +30,7 @@
 }
 
 .case__title {
-  margin: 0;
+  margin: 7px 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -22,20 +39,133 @@
   text-align: left;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 16px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+    padding-top: 57px;
+  }
+}
+
+.case__text {
+  margin: 33px 0 25px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 65px 0 53px 0;
+  }
+}
+
+.case__text br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.case__numbers-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 16px;
+  }
+}
+
+.case__list {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  text-align: center;
+}
+
+.case__item {
+  position: relative;
+  flex-grow: 1;
+  min-width: 124px;
+  margin-right: 31px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -50%;
+    min-width: 124px;
+    width: 100%;
+    height: 56px;
+    background-image: url("../img/frame-for-case.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 162px;
+    margin-right: 42px;
+
+    &::before {
+      width: 162px;
+      height: 72px;
+      background-image: url("../img/frame-for-case_tablet.svg");
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .case__number {
+  padding-top: 14px;
+  padding-bottom: 10px;
+
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  text-align: center;
   text-transform: uppercase;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.case__description {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 1px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.case__description br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .case__sum {
+  margin: 18px 0 40px 0;
+
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -44,9 +174,81 @@
   text-transform: uppercase;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+    margin-top: 7px;
+    margin-left: auto;
+
+    font-size: 20px;
+    line-height: 28px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 327px;
+    margin: 50px auto 0 0;
+
+    text-align: left;
+  }
+}
+
+.case__slider {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.case__image-before {
+  width: 311px;
+  height: 232px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 620px;
+    margin-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 690px;
+    height: 656px;
+    margin-top: 0;
+  }
+}
+
+.case__image-after {
+  display: none;
+}
+
+.case__slider-toggles {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 0 0;
+
+  background-image: url("../img/icon_slider.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 34px;
+    width: 100%;
+
+    background-image: url("../img/icon_slider_tablet.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 71px;
+    right: -40px;
+  }
 }
 
 .case__slider-toggle {
+  margin-right: 110px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -54,5 +256,18 @@
   text-align: center;
   text-transform: uppercase;
 
+  background-color: transparent;
   color: black;
+  border: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 461px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

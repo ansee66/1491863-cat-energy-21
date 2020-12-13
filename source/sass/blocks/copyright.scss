@@ -1,6 +1,27 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   font-size: 16px;
+  text-decoration: none;
+  color: $darkgrey;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link p {
+  margin: 15px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.copyright__logo {
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
 }
