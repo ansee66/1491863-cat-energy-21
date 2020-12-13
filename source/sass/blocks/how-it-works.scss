@@ -1,9 +1,19 @@
 .how-it-works {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .how-it-works__title {
   margin: 0;
+  margin-bottom: 27px;
+  padding-top: 8px;
 
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -12,6 +22,13 @@
   text-align: left;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .how-it-works__list {
@@ -23,6 +40,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 37px;
     align-content: start;
   }
 
@@ -32,10 +50,15 @@
 }
 
 .how-it-works__item {
+  padding: 12px 0 14px 80px;
+
   @media (min-width: $tablet-width) {
+    box-sizing: border-box;
     width: 250px;
     min-height: 280px;
     margin-right: 130px;
+    padding-top: 157px;
+    padding-left: 0;
 
     &:nth-child(2n) {
       margin-right: 75px;

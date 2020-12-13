@@ -1,0 +1,54 @@
+.checkbox__label {
+  display: block;
+  position: relative;
+  margin-bottom: 13px;
+  padding: 6px 0 6px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 59px;
+  }
+}
+
+.checkbox__input + .checkbox__label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $specialgrey;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Checked */
+
+.checkbox__input:checked + .checkbox__label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  width: 26px;
+  height: 26px;
+
+  background-image: url("../img/checkbox_tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: $tablet-width) {
+    top: 7px;
+    left: 7px;
+  }
+}
+
+/* Disabled */
+
+.checkbox__input:disabled + .checkbox__label {
+  opacity: 0.3;
+}

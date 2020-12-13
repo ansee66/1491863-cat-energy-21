@@ -3,13 +3,23 @@
 }
 
 .page-main__h1-wrapper {
-  display: grid;
-  grid-template-rows: 1fr;
+  position: relative;
+  /*display: grid;
+  grid-template-rows: 1fr;*/
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 83px;
+  }
 }
 
 .page-main__title {
-  grid-row: 1 / 2;
-  grid-column: 1 / -1;
+  /*grid-row: 1 / 2;
+  grid-column: 1 / -1;*/
+  position: absolute;
+  top: 27px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -24,6 +34,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 117px;
     padding-right: 30px;
+    top: 40px;
 
     font-size: 60px;
     line-height: 60px;
@@ -33,9 +44,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1140px;
-    margin: 0 auto;
-    padding-left: 80px;
+    max-width: 600px;
+    top: 225px;
+    left: 73px;
     padding-right: 0;
   }
 }
