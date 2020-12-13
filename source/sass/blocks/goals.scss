@@ -11,23 +11,33 @@
     align-content: start;
 
     width: 1220px;
+    margin-bottom: 30px;
   }
 }
 
 .goals__item {
   box-sizing: border-box;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   background-color: $basicgrey;
 
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 55px 52px;
+    margin-bottom: 31px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 570px;
+    padding-right: 51px;
   }
 }
 
 .goals__title {
   margin: 0;
+  padding-left: 71px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -37,9 +47,54 @@
   text-transform: uppercase;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-top: 18px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    padding-bottom: 60px;
+  }
+}
+
+.goals__description {
+  margin: 19px 0 22px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 14px;
+  }
+}
+
+.goals__item--slim .goals__description {
+  @media (min-width: $tablet-width) {
+    width: 377px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.goals__item--pro .goals__description {
+  @media (min-width: $tablet-width) {
+    width: 342px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .goals__link {
+  position: relative;
+  display: block;
+  padding-top: 19px;
+
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -48,4 +103,50 @@
   text-decoration: none;
 
   color: black;
+  border-top: 1px solid #d9d9d9;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/icon_arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 32px;
+    background-image: url("../img/icon_arrow_big.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 29px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 37px;
+      left: 132px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
+
+    border-top: none;
+
+    &::after {
+      top: 14px;
+      left: 132px;
+    }
+  }
 }
