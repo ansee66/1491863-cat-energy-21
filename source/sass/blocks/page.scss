@@ -32,6 +32,9 @@
 }
 
 .page__title {
+  position: relative;
+  margin: 27px 0;
+
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -39,4 +42,30 @@
   text-align: left;
 
   color: black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+  }
 }
