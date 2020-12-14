@@ -8,7 +8,7 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 57px 71px 51px 71px;
+    padding: 57px 71px 56px 71px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,14 +21,18 @@
   }
 }
 
+.contacts--inner-page {
+  background-color: $basicgrey;
+}
+
 .contacts__invitation {
   min-width: 140px;
-  margin: 9px 0;
+  margin: 8px 0 4px 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 20px;
   text-transform: uppercase;
 
   color: black;

@@ -3,9 +3,9 @@
 }
 
 .page-main__h1-wrapper {
-  position: relative;
-  /*display: grid;
-  grid-template-rows: 1fr;*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 83px;
@@ -13,13 +13,10 @@
 }
 
 .page-main__title {
-  /*grid-row: 1 / 2;
-  grid-column: 1 / -1;*/
-  position: absolute;
-  top: 27px;
-  box-sizing: border-box;
-  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
   margin: 0;
+  margin-top: 27px;
 
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -32,9 +29,7 @@
   z-index: 1;
 
   @media (min-width: $tablet-width) {
-    padding-left: 117px;
-    padding-right: 30px;
-    top: 40px;
+    margin: 41px 0 0 117px;
 
     font-size: 60px;
     line-height: 60px;
@@ -44,9 +39,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 600px;
-    top: 225px;
-    left: 73px;
-    padding-right: 0;
+    margin: 85px 0 0 190px;
   }
 }

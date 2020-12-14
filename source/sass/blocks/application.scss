@@ -3,10 +3,38 @@
   padding-bottom: 30px;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.application__form {
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .application__intro {
+  margin: 0 0 17px 0;
+
   color: black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+    padding-top: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 21px;
+  }
 }
 
 .application__wrapper {
@@ -18,16 +46,82 @@
 
 .application__fieldset {
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0 11px 0;
   border: 0;
 }
 
+.application__fieldset--cat-info {
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+  }
+}
+
+.application__fieldset--radio {
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 25px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px 28px;
+
+    border: 1px solid #e7e7e7;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+    margin-bottom: 33px;
+    margin-left: 40px;
+    //padding-left: 68px;
+  }
+}
+
 .application__fieldset-title {
+  position: relative;
+  padding: 1px 0 12px 0;
+
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+    padding-top: 35px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    & br {
+      display: none;
+    }
+  }
 }
 
 .application__list {
@@ -41,31 +135,115 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 }
 
-.application__item,
+.application__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 13px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 20px 0;
+  }
+
+  /*@media (min-width: $desktop-width) {
+    padding-right: 40px;
+  }*/
+}
+
+.application__item--radio {
+  @media (min-width: $tablet-width) {
+    margin: 12px 0;
+  }
+}
+
 .application__item input {
+  flex-grow: 1;
+
+  box-sizing: border-box;
+  padding: 12px 15px 13px 15px;
+
   font: inherit;
   text-transform: uppercase;
+
+  border: 1px solid $specialgrey;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 15px 10px 15px;
+  }
 }
 
 .application__item--textarea {
   box-sizing: border-box;
   width: 100%;
+  height: 150px;
+  margin-top: 15px;
+  padding: 9px 12px 9px 15px;
+
+  font: inherit;
+  text-transform: uppercase;
+
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    height: 174px;
+  }
+}
+
+.application__label {
+  cursor: pointer;
+}
+
+.application__label--text {
+  margin-right: 14px;
 }
 
 .application__end-wrapper {
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.application__button {
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+    height: 52px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
 .application__note {
+  margin: 22px 0 2px 0;
   font-family: "Arial", sans-serif;
+  font-size: 14px;
   line-height: 16px;
   text-transform: none;
+  text-align: center;
 
   color: black;
+
+  @media (min-width: $tablet-width) {
+    margin: 15px 0 0 30px;
+
+    font-size: 16px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 17px 0 0 0;
+  }
 }
