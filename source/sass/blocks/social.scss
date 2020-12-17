@@ -15,6 +15,40 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 27px;
+  }
+}
+
+.social__link--vkontakte svg {
+  width: 23px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__link--facebook svg {
+  width: 23px;
+  height: 23px;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
+}
+
+.social__link--instagram svg {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .social__link--vkontakte,
