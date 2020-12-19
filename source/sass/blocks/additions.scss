@@ -10,25 +10,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: start;
+    column-gap: 57px;
 
-    padding: 0 0 15px 0;
+    padding: 0 0 11px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
 
-    padding: 4px 0 20px 0;
+    padding: 0 0 18px 0;
   }
 }
 
 .additions__item {
   @media (min-width: $tablet-width) {
-    margin-bottom: 15px;
-
-    &:nth-child(2n) {
-      margin-left: 30px;
-    }
+    margin-bottom: 18px;
   }
 
   @media (min-width: $desktop-width) {

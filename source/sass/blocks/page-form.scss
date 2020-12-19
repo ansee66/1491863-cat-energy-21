@@ -4,10 +4,17 @@
   font-family: "Oswald", sans-serif;
   font-weight: 400;
 
+  // для скрывания зеленых линий около заголовков
+  overflow: hidden;
+
   @media (min-width: $tablet-width) {
-    padding: 0 40px;
+    padding: 0 37px 0 40px;
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
   }
 }

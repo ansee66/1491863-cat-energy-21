@@ -16,20 +16,108 @@
 }
 
 .goals__item {
+  position: relative;
   box-sizing: border-box;
   padding: 20px;
   margin-bottom: 22px;
 
   background-color: $basicgrey;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background-color: $basicgreen;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--slim::after {
+    top: 21px;
+    left: 29px;
+    width: 50px;
+    height: 53px;
+
+    background-image: url("../img/icon_cat_sit.svg");
+  }
+
+  &--pro::after {
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+
+    background-image: url("../img/icon_cat_go.svg");
+  }
+
   @media (min-width: $tablet-width) {
     padding: 60px 0 55px 52px;
     margin-bottom: 31px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 91px;
+      right: 62px;
+      left: auto;
+    }
+
+    &--slim::after {
+      top: 81px;
+      right: 91px;
+      left: auto;
+      width: 140px;
+      height: 192px;
+    }
+
+    &--pro::after {
+      top: 137px;
+      right: 28px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    padding-right: 51px;
+    padding: 60px 51px 58px 52px;
+    margin-bottom: 27px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      right: auto;
+      left: 52px;
+    }
+
+    &--slim::after {
+      top: 41px;
+      right: auto;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 67px;
+      right: auto;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+    }
   }
 }
 
@@ -129,6 +217,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 29px;
+    border-top: none;
 
     font-size: 20px;
     line-height: 30px;
@@ -141,8 +230,6 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 4px;
-
-    border-top: none;
 
     &::after {
       top: 14px;
