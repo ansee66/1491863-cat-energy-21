@@ -19,7 +19,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 69px;
+    row-gap: 68px;
+
+    padding: 11px 0 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,7 +36,7 @@
 .basic-goods__item {
   position: relative;
 
-  padding-top: 19px;
+  padding-top: 20px;
   padding-bottom: 24px;
 
   &::before {
@@ -72,7 +74,7 @@
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
     height: 429px;
-    margin-top: 71px;
+    margin-top: 73px;
     padding: 36px;
 
     border: 2px solid $basicgrey;
@@ -88,8 +90,9 @@
 }
 
 .basic-goods__more-goods-title {
+  position: relative;
   margin: 0;
-  padding-top: 61px;
+  padding-top: 60px;
 
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -103,6 +106,23 @@
     display: none;
   }
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 20px;
+    left: 50%;
+    margin-left: -15px;
+
+    background-color: #d3d3d3;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 63px;
 
@@ -111,6 +131,13 @@
 
     & br {
       display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      width: 60px;
+      top: -20px;
+      margin-left: -30px;
     }
   }
 }

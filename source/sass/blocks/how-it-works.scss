@@ -11,9 +11,7 @@
 }
 
 .how-it-works__title {
-  margin: 0;
-  margin-bottom: 27px;
-  padding-top: 8px;
+  margin: 31px 0 27px 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -24,10 +22,14 @@
   color: black;
 
   @media (min-width: $tablet-width) {
-    padding-top: 15px;
+    margin: 48px 0 27px 0;
 
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 45px 0 27px 0;
   }
 }
 
@@ -40,36 +42,104 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
     grid-row-gap: 37px;
     align-content: start;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
 .how-it-works__item {
+  position: relative;
   padding: 12px 0 14px 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+
+    background-color: $basicgreen;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--nutrients::before {
+    background-image: url("../img/icon_leaf.svg");
+  }
+
+  &--boiling::before {
+    background-image: url("../img/icon_tub.svg");
+  }
+
+  &--meal::before {
+    background-image: url("../img/icon_eat.svg");
+  }
+
+  &--time::before {
+    background-image: url("../img/icon_alarm.svg");
+  }
 
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
     width: 250px;
     min-height: 280px;
-    margin-right: 130px;
     padding-top: 157px;
     padding-left: 0;
 
-    &:nth-child(2n) {
-      margin-right: 75px;
+    &::after {
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      z-index: -1;
+
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basicgrey;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 75px;
+    }
+
+    &--nutrients::after {
+      content: "1";
+      width: 112px;
+      height: 280px;
+      right: 20px;
+    }
+
+    &--boiling::after {
+      content: "2";
+      width: 134px;
+      height: 280px;
+    }
+
+    &--meal::after {
+      content: "3";
+      width: 134px;
+      height: 280px;
+    }
+
+    &--time::after {
+      content: "4";
+      width: 136px;
+      height: 280px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 70px;
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+    width: 245px;
+    padding-top: 156px;
   }
 }

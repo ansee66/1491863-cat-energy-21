@@ -15,4 +15,13 @@
   color: white;
   background-color: $basicgreen;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $basicgreen2;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
