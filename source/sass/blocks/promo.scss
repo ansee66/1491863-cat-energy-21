@@ -1,17 +1,23 @@
 .promo {
   grid-column: 1 / -1;
-  grid-row: 1 / 2;
+  grid-row: 1 / 3;
 
   margin-bottom: 22px;
 
   background-image:
     linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../img/index-background-promo.jpg");
+    url("../img/promo-background-mobile.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size:
     100% 302px,
     320px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/promo-background-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -24,12 +30,18 @@
 
     background-image:
       linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-      url("../img/index-background-promo.jpg");
+      url("../img/index-background-desktop.jpg");
     background-position: right center;
     background-repeat: no-repeat;
     background-size:
       50% 694px,
       50% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo-background-desktop@2x.jpg");
+    }
   }
 }
 
@@ -63,7 +75,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    margin: 203px 0 18px 88px;
+    margin: 210px 0 18px 88px;
 
     font-size: 20px;
     line-height: 20px;
@@ -74,7 +86,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
-    margin: 245px 0 0 80px;
+    margin: 242px 0 0 80px;
   }
 }
 
@@ -89,6 +101,7 @@
     grid-row: 2 / 3;
     width: 709px;
     height: 609px;
+    margin-top: -83px;
   }
 
   @media (min-width: $desktop-width) {
@@ -125,6 +138,6 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin: 316px 0 0 80px;
+    margin: 314px 0 0 80px;
   }
 }
