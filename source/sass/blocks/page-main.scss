@@ -2,6 +2,11 @@
   grid-area: content;
 }
 
+.page-main--catalog {
+  // для скрывания зеленых линий около заголовков
+  overflow: hidden;
+}
+
 .page-main__h1-promo-wrapper {
   display: grid;
   grid-template-columns: 1fr;

@@ -21,6 +21,16 @@
   }
 }
 
+.social__link {
+  display: block;
+}
+
+.social__link--instagram {
+  @media (min-width: $tablet-width) {
+    height: 23px;
+  }
+}
+
 .social__link--vkontakte svg {
   width: 23px;
   height: 16px;
