@@ -100,8 +100,8 @@
 
 .main-nav__item {
   position: relative;
-  padding-top: 22px;
-  padding-bottom: 24px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -122,6 +122,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-top: 24px;
     margin-left: 35px;
 
     font-size: 18px;
@@ -149,10 +151,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px;
+    margin-top: 60px;
 
     font-size: 20px;
     line-height: 30px;
+
+    &--active::after {
+      bottom: 16px;
+    }
   }
 }
 

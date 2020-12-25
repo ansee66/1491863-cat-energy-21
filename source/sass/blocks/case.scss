@@ -5,6 +5,8 @@
   background-color: $greyforcase;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 26px;
+
     background-color: transparent;
     background-image: linear-gradient(to top, $greyforcase, $greyforcase);
     background-position: center bottom;
@@ -24,8 +26,11 @@
 .case__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: auto 650px;
-    gap: 130px;
+    grid-template-columns: auto 690px;
+    gap: 100px;
+
+    width: 1220px;
+    margin: 0 auto;
   }
 }
 
@@ -54,7 +59,7 @@
 }
 
 .case__text {
-  margin: 33px 0 25px 0;
+  margin: 32px 0 25px 0;
 
   @media (min-width: $tablet-width) {
     margin: 65px 0 53px 0;
@@ -164,7 +169,7 @@
 }
 
 .case__sum {
-  margin: 18px 0 40px 0;
+  margin: 19px 0 40px 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 14px;
@@ -201,31 +206,65 @@
   }
 }
 
-.case__image-before {
-  width: 311px;
-  height: 232px;
-
+.case__slider-wrapper {
   @media (min-width: $tablet-width) {
-    width: 708px;
-    height: 620px;
-    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
-    width: 690px;
-    height: 656px;
-    margin-top: 0;
+    grid-template-columns: 405px 325px;
+  }
+}
+
+.case__image-before {
+  width: 311px;
+  height: 232px;
+  margin-left: -10px;
+
+  @media (min-width: $tablet-width) {
+    width: 354px;
+    height: 620px;
+    margin-top: 32px;
+    margin-left: 0;
+    margin-right: -29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 405px;
+    height: 536px;
+    margin-top: 5px;
+    margin-right: -79px;
   }
 }
 
 .case__image-after {
   display: none;
+  width: 251px;
+  height: 240px;
+  margin-bottom: -8px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 354px;
+    height: 607px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 325px;
+    height: 654px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    margin-right: -40px;
+  }
 }
 
 .case__slider-toggles {
   display: flex;
   justify-content: center;
-  margin: 30px 0 0 0;
+  margin: 29px 0 0 0;
 
   background-image: url("../img/icon_slider.svg");
   background-position: center center;
@@ -233,7 +272,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 34px;
+    bottom: 42px;
     width: 100%;
 
     background-image: url("../img/icon_slider_tablet.svg");
