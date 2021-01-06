@@ -17,7 +17,9 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 10px;
-    padding-bottom: 0;
+    padding-bottom: 1px;
+
+    background-image: linear-gradient(to top, $basicgrey, $basicgrey);
 
     border-top: none;
   }
@@ -31,6 +33,12 @@
 
     width: 1220px;
     margin: 0 auto;
+    padding: 0 110px;
+
+    background-image: linear-gradient(to top, $greyforcase, $greyforcase);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 395px 462px;
   }
 }
 
@@ -123,9 +131,16 @@
     &::before {
       width: 162px;
       height: 72px;
-      background-image: url("../img/frame-for-case_tablet.svg");
       background-position: top center;
       background-repeat: no-repeat;
+    }
+
+    &--weight::before {
+      background-image: url("../img/frame-for-case_weight_tablet.svg");
+    }
+
+    &--time::before {
+      background-image: url("../img/frame-for-case_time_tablet.svg");
     }
   }
 }
@@ -169,7 +184,7 @@
 }
 
 .case__sum {
-  margin: 19px 0 40px 0;
+  margin: 19px 0 41px 0;
 
   font-family: "Oswald", sans-serif;
   font-size: 14px;
@@ -182,8 +197,7 @@
 
   @media (min-width: $tablet-width) {
     width: 180px;
-    margin-top: 7px;
-    margin-left: auto;
+    margin: 7px 0 40px auto;
 
     font-size: 20px;
     line-height: 28px;
@@ -192,7 +206,7 @@
 
   @media (min-width: $desktop-width) {
     width: 327px;
-    margin: 50px auto 0 0;
+    margin: 52px auto 0 0;
 
     text-align: left;
   }
@@ -210,11 +224,26 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    //justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 405px 325px;
+  }
+}
+
+.case__image-before-wrapper {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+}
+
+.case__image-after-wrapper {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
   }
 }
 
@@ -228,14 +257,13 @@
     height: 620px;
     margin-top: 32px;
     margin-left: 0;
-    margin-right: -29px;
   }
 
   @media (min-width: $desktop-width) {
     width: 405px;
     height: 536px;
     margin-top: 5px;
-    margin-right: -79px;
+    margin-right: -40px;
   }
 }
 
@@ -262,32 +290,84 @@
 }
 
 .case__slider-toggles {
+  position: relative;
   display: flex;
   justify-content: center;
   margin: 29px 0 0 0;
 
-  background-image: url("../img/icon_slider.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 12px;
+    top: 3px;
+    left: 50%;
+    margin-left: -41px;
+
+    background-color: white;
+    border: 1px solid $specialgrey;
+    border-radius: 6px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    top: 7px;
+    left: 50%;
+    margin-left: -35px;
+
+    background-color: $basicgreen;
+    border-radius: 6px;
+
+    cursor: pointer;
+  }
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    bottom: 42px;
-    width: 100%;
+    margin: -74px 0 43px 0;
 
-    background-image: url("../img/icon_slider_tablet.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-image: none;
+
+    &::before {
+      width: 428px;
+      height: 6px;
+      top: 13px;
+      margin-left: -214px;
+
+      background-color: #dcdcdc;
+      border: none;
+    }
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      top: 0;
+      margin-left: -16px;
+
+      border: 12px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px $specialgrey, 0 1px 3px 1px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover::after {
+      box-shadow: 0 0 0 1px $specialgrey, 0 2px 4px 1px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active::after {
+      box-shadow: 0 0 0 1px $basicgreen, 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+    }
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 71px;
-    right: -40px;
+    margin: -100px 0 68px 120px;
   }
 }
 
 .case__slider-toggle {
-  margin-right: 110px;
+  margin-right: 118px;
+  padding: 0;
+
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -298,15 +378,33 @@
   background-color: transparent;
   color: black;
   border: none;
+  border-bottom: 1px solid transparent;
+
+  cursor: pointer;
 
   &:last-child {
-    margin-right: 0;
+    margin-right: -5px;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+  }
+
+  &:active {
+    border-bottom: none;
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 461px;
+    margin-right: 473px;
 
     font-size: 20px;
     line-height: 30px;
+
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
