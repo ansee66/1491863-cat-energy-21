@@ -101,7 +101,8 @@
 }
 
 .application__fieldset-title {
-  display: inline-block;
+  position: relative;
+  //display: inline-block;
 
   padding: 1px 0 12px 0;
 
@@ -113,13 +114,14 @@
 
   &::after {
     content: "";
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    //display: inline-block;
+    //vertical-align: middle;
     width: 100vw;
     height: 2px;
     margin-right: -100vw;
     right: -22px;
+    top: 16px;
     background-color: $basicgreen;
   }
 
@@ -136,17 +138,19 @@
 
     &::after {
       right: -40px;
+      top: 58px;
     }
 
     &::before {
       content: "";
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
+      position: absolute;
+      //display: inline-block;
+      //vertical-align: middle;
       width: 100vw;
       height: 2px;
       margin-left: -100vw;
       left: -40px;
+      top: 58px;
       background-color: $basicgreen;
     }
   }
@@ -168,10 +172,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    margin-bottom: -3px;
   }
 }
 
 .application__item {
+  position: relative; // для иконок email и phone в инпутах
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -215,7 +221,20 @@
   font: inherit;
   text-transform: uppercase;
 
-  border: 1px solid $specialgrey;
+  border: 1px solid $greyforframes;
+
+
+  &:hover {
+    border: 1px solid $specialgrey;
+  }
+
+  &:focus {
+    border: 2px solid $darkgrey;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff8282;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 10px 15px 10px 15px;
@@ -230,7 +249,7 @@
   margin-right: 14px;
 }
 
-.application__input {
+/* .application__input {
   background-repeat: no-repeat;
 
   &--email {
@@ -244,6 +263,47 @@
     background-position: right 12px center;
     background-size: 20px 20px;
   }
+} */
+
+.application__input {
+  outline: none;
+}
+
+.application__icon-email {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 15px;
+
+  fill: none;
+  stroke: $specialdarkgrey;
+}
+
+.application__icon-phone {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 14px;
+  right: 13px;
+
+  fill: $specialdarkgrey;
+}
+
+.application__input:focus + .application__icon-email {
+  stroke: $basicgreen;
+}
+
+.application__input:focus + .application__icon-phone {
+  fill: $basicgreen;
+}
+
+.application__input:invalid:not(:placeholder-shown) + .application__icon-email {
+  stroke: #ff8282;
+}
+
+.application__input:invalid:not(:placeholder-shown) + .application__icon-phone {
+  fill: #ff8282;
 }
 
 .application__end-wrapper {
