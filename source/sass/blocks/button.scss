@@ -16,6 +16,8 @@
   background-color: $basicgreen;
   border: none;
 
+  cursor: pointer;
+
   &:hover,
   &:focus {
     background-color: $basicgreen2;
