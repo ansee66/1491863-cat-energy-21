@@ -62,8 +62,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0 55px 52px;
-    margin-bottom: 31px;
+    padding: 60px 0 56px 52px;
+    margin-bottom: 30px;
 
     &::before {
       width: 200px;
@@ -216,14 +216,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 29px;
+    padding-top: 30px;
     border-top: none;
 
     font-size: 20px;
     line-height: 30px;
 
     &::after {
-      top: 37px;
+      top: 38px;
       left: 132px;
     }
   }
