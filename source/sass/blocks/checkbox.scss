@@ -26,6 +26,12 @@
   }
 }
 
+/* Hover */
+
+.checkbox__input + .checkbox__label:hover::before {
+  border: 1px solid #bababa;
+}
+
 /* Checked */
 
 .checkbox__input:checked + .checkbox__label::after {

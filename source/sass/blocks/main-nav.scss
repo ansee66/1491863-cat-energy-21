@@ -183,11 +183,22 @@
 .main-nav__item a[href] {
   &:hover,
   &:focus {
-    color: rgba(0, 0, 0, 0.6);
+    opacity: 0.6;
   }
 
   &:active {
-    color: rgba(0, 0, 0, 0.3);
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   @media (min-width: $desktop-width) {
