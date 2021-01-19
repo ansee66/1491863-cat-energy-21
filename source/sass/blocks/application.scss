@@ -82,7 +82,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 42px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     padding: 10px 28px;
 
     border: 1px solid #e7e7e7;
@@ -196,45 +196,32 @@
   box-sizing: border-box;
   width: 100%;
   height: 150px;
-  margin-top: 15px;
+  margin: 16px 0 11px 0;
   padding: 9px 12px 9px 15px;
 
   font: inherit;
   text-transform: uppercase;
 
-  border: 1px solid #e7e7e7;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 18px;
-    height: 174px;
-  }
-}
-
-.application__item input {
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding: 12px 15px 13px 15px;
-
-  font: inherit;
-  text-transform: uppercase;
-
-  border: 1px solid $greyforframes;
-
+  border: none;
+  outline: 1px solid $greyforframes;
+  outline-offset: -1px;
 
   &:hover {
-    border: 1px solid $specialgrey;
+    outline: 1px solid $specialgrey;
   }
 
   &:focus {
-    border: 2px solid $darkgrey;
-  }
-
-  &:required:invalid:not(:placeholder-shown) {
-    border: 2px solid #ff8282;
+    outline: 2px solid $darkgrey;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 10px 15px 10px 15px;
+    margin: 18px 0 20px 0;
+    height: 174px;
+    padding: 12px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 20px 0;
   }
 }
 
@@ -243,7 +230,41 @@
 }
 
 .application__label--text {
-  margin-right: 14px;
+  margin-right: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 17px;
+  }
+}
+
+.application__input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 12px 15px 13px 15px;
+  margin: 1px 0;
+
+  font: inherit;
+  text-transform: uppercase;
+
+  border: none;
+  outline: 1px solid $greyforframes;
+  outline-offset: -1px;
+
+  &:hover {
+    outline: 1px solid $specialgrey;
+  }
+
+  &:focus {
+    outline: 2px solid $darkgrey;
+  }
+
+  &:required:invalid {
+    outline: 2px solid #ff8282;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 15px 10px 15px;
+  }
 }
 
 .application__icon-email {
@@ -275,11 +296,11 @@
   fill: $basicgreen;
 }
 
-.application__input:invalid:not(:placeholder-shown) + .application__icon-email {
+.application__input:required:invalid + .application__icon-email {
   stroke: #ff8282;
 }
 
-.application__input:invalid:not(:placeholder-shown) + .application__icon-phone {
+.application__input:required:invalid + .application__icon-phone {
   fill: #ff8282;
 }
 

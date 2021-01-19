@@ -1,7 +1,7 @@
 .checkbox__label {
   display: block;
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   padding: 6px 0 6px 46px;
 
   @media (min-width: $tablet-width) {
@@ -28,8 +28,18 @@
 
 /* Hover */
 
-.checkbox__input + .checkbox__label:hover::before {
+.checkbox__input:hover + .checkbox__label::before {
   border: 1px solid #bababa;
+}
+
+/* Focus */
+
+.checkbox__input:focus + .checkbox__label {
+  opacity: 0.6;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  border: 1px solid $darkgrey;
 }
 
 /* Checked */
