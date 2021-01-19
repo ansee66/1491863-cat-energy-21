@@ -27,7 +27,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 64px;
+    row-gap: 63px;
 
     padding-top: 6px;
   }
@@ -102,10 +102,6 @@
 
   color: #111111;
 
-  & br {
-    display: none;
-  }
-
   &::before,
   &::after {
     content: "";
@@ -129,10 +125,6 @@
     font-size: 20px;
     line-height: 22px;
 
-    & br {
-      display: inline-block;
-    }
-
     &::before,
     &::after {
       width: 60px;
@@ -142,21 +134,29 @@
   }
 }
 
+.basic-goods__more-goods-title br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
 .basic-goods__more-goods-text {
   margin: 7px 0;
-
-  & br {
-    display: none;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 24px;
 
     line-height: 18px;
+  }
+}
 
-    & br {
-      display: inline-block;
-    }
+.basic-goods__more-goods-text br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
   }
 }
 

@@ -30,8 +30,18 @@
 
 /* Hover */
 
-.radio__input + .radio__label:hover::before {
+.radio__input:hover + .radio__label::before {
   border: 1px solid #bababa;
+}
+
+/* Focus */
+
+.radio__input:focus + .radio__label {
+  opacity: 0.6;
+}
+
+.radio__input:focus + .radio__label::before {
+  border: 1px solid $darkgrey;
 }
 
 /* Checked */

@@ -4,14 +4,6 @@
   position: relative;
 }
 
-.page-footer__contacts {
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 95px;
-    right: 52.8%;
-  }
-}
-
 .page-footer__icons-box {
   padding-top: 39px;
   padding-bottom: 22px;

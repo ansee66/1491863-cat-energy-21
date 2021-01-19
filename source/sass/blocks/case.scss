@@ -67,16 +67,10 @@
 }
 
 .case__text {
-  margin: 32px 0 25px 0;
+  margin: 33px 0 25px 0;
 
   @media (min-width: $tablet-width) {
     margin: 65px 0 53px 0;
-  }
-}
-
-.case__text br {
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -205,10 +199,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 327px;
+    width: 366px;
     margin: 52px auto 0 0;
 
     text-align: left;
+  }
+}
+
+.case__sum span {
+  @media (min-width: $desktop-width) {
+    margin-left: 58px;
   }
 }
 
