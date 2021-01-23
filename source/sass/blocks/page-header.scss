@@ -1,11 +1,38 @@
 .page-header {
   grid-area: header;
 
+  // фон тут, чтобы при увеличении кол-ва пунктов меню оно оставалось на нем
+  &--index {
+    @media (min-width: $desktop-width) {
+      min-height: 694px;
+      margin-bottom: -567px;
+
+      background-image:
+        linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/promo-background-desktop.jpg");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size:
+        50% 694px,
+        50% auto;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/promo-background-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.page-header--inner,
+.page-header__wrapper {
   box-sizing: border-box;
   width: 100%;
 
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
@@ -13,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    z-index: 1;
+    padding-top: 29px;
   }
 }
 
@@ -22,6 +49,8 @@
   margin-top: 12px;
   margin-bottom: 15px;
   flex-shrink: 0;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -39,7 +68,6 @@
 
   @media (min-width: $desktop-width) {
     height: 59px;
-    margin-top: 53px;
   }
 }
 

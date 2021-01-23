@@ -178,6 +178,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 
   margin: 13px 0;
 
@@ -258,7 +259,7 @@
     outline: 2px solid $darkgrey;
   }
 
-  &:required:invalid {
+  &:invalid:not(:focus) {
     outline: 2px solid #ff8282;
   }
 
@@ -296,11 +297,11 @@
   fill: $basicgreen;
 }
 
-.application__input:required:invalid + .application__icon-email {
+.application__input:required:invalid:not(:focus) + .application__icon-email {
   stroke: #ff8282;
 }
 
-.application__input:required:invalid + .application__icon-phone {
+.application__input:required:invalid:not(:focus) + .application__icon-phone {
   fill: #ff8282;
 }
 
@@ -321,11 +322,12 @@
 }
 
 .application__button {
+  margin: 0 auto;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
     width: 282px;
-    height: 52px;
+    min-height: 52px;
 
     font-size: 20px;
   }

@@ -18,7 +18,7 @@
 .goals__item {
   position: relative;
   box-sizing: border-box;
-  padding: 21px 20px;
+  padding: 21px 20px 18px 20px;
   margin-bottom: 20px;
 
   background-color: $basicgrey;
@@ -62,7 +62,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0 56px 52px;
+    padding: 60px 275px 56px 52px;
     margin-bottom: 30px;
 
     &::before {
@@ -127,7 +127,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
@@ -151,10 +151,20 @@
 }
 
 .goals__description {
-  margin: 19px 0 22px 0;
+  margin: 19px 0 20px 0;
+  padding-bottom: 21px;
+
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    margin-top: 14px;
+    margin: 14px 0 51px 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 14px 0 25px 0;
   }
 }
 
@@ -179,27 +189,24 @@
 }
 
 .goals__link {
-  position: relative;
-  display: block;
-  padding-top: 19px;
+  display: inline-block;
 
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-
   color: black;
-  border-top: 1px solid #d9d9d9;
 
   &::after {
     content: "";
-    position: absolute;
-    top: 20px;
-    left: 100px;
+    display: inline-block;
     width: 24px;
     height: 12px;
+    margin-left: 16px;
+    padding-bottom: 2px;
+
     background-image: url("../img/icon_arrow.svg");
     background-repeat: no-repeat;
   }
@@ -216,24 +223,17 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 30px;
-    border-top: none;
-
     font-size: 20px;
     line-height: 30px;
 
     &::after {
-      top: 38px;
-      left: 132px;
+      margin-left: 25px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 4px;
-
     &::after {
-      top: 14px;
-      left: 132px;
+      margin-left: 27px;
     }
   }
 }
